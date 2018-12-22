@@ -7,20 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./Assests/CSS/style.css">
+    <link rel="stylesheet" href="Assests/CSS/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <!--<body background="Assests/Images/Trivia_background.jpg"></body>-->
+    <body background="Assests/Images/Trivia_background.jpg"></body>
     <div id="container">
         <header>
             <h1>NBA Trivia Game</h1>
         </header>
         <section>
-            <div id="result"></div>
-            <form name="triviaForm" onsubmit="return submitAnswers()"></form>
+            <div id="results"></div>
+            <form name="triviaForm" onsubmit="return submitAnswers()">
             <h3>1. What player scored the most points in one game?</h3>
             <input type="radio" name="q1" value="a" id="q1a"> a.Michael Jordan <br>
             <input type="radio" name="q1" value="b" id="q1b"> b.Wilt Chamberlain <br>
@@ -52,14 +52,14 @@
             <input type="radio" name="q5" value="d" id="q5d"> d.Jason Kidd <br>
             <br><br>
             <input type="submit" value="Submit Answers">
+        </form>
         </section>
     </div>
 
     <footer>
         <p>Copyright</p>
     </footer>
-    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/js/bootstrap.min.js">
-    <link rel="stylesheet" href="./Assests/Javascript/app.js">
+    <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Assests/Javascript/app.js"></script>
 </body>
 
-</html>

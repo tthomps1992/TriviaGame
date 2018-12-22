@@ -1,3 +1,5 @@
+
+
 function submitAnswers() {
     let total = 5;
     let score = 0;
@@ -9,5 +11,37 @@ function submitAnswers() {
     let q4 = document.forms["triviaForm"]["q4"].value;
     let q5 = document.forms["triviaForm"]["q5"].value; 
 
-    alert(q1);
+
+
+//validation
+
+for (i = 1; i <= total; i++) {
+    if (eval('q' + i) == null || eval('q' + i) == ' ') {
+        alert('You missed question '+ i );
+        return false;
+    }
 }
+// set correct answers 
+let answers = ["b", "a", "d", "c", "b"];
+
+// check answers 
+for (i = 1; i < total; i++) {
+    if (eval('q' + i) == answers[i - 1]){
+        score++; 
+    }
+}
+
+// Display answers 
+let results = document.getElementById('results');
+
+results.innerHTML = '<h3>You Scored <span>' + score + '</span>out of' + total + '</span></h3>';
+
+alert('You scored + ' + score+ ' out of ' + total);
+
+return false;
+
+
+}
+
+
+
